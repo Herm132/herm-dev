@@ -1,16 +1,19 @@
 ---
+import Avatar from '../components/Avatar.astro';
+import Details from '../components/Details.astro';
+import Socials from '../components/Socials.astro';
+import Layout from '../layouts/Layout.astro';
 
+/**
+ * Replace the values below with your own information
+ */
+const title = "Hope's Portfolio";
+const siteName = 'Hope Portfolio';
+const siteDescription = 'Showcasing the professional work and projects.';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title={title} siteName={siteName} siteDescription={siteDescription}>
+	<Avatar />
+	<Details />
+	<Socials />
+</Layout>

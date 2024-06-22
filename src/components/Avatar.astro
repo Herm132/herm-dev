@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+
+const src = '/assets/img/ai-generated-portrait.webp';
+---
+
+<div class="flex justify-center items-center rounded-full border-4 border-gray-950">
+	<Image
+		src={src}
+		alt="Selfie of Harold (Me)"
+		width={156}
+		height={156}
+		class="animate-zoom-in-out rounded-full size-36 md:size-40 p-0.5 duration-300"
+		loading="eager"
+	/>
+</div>
