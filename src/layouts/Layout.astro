@@ -24,6 +24,15 @@ const { title, siteName, siteDescription } = Astro.props;
 		<meta property="og:description" content={siteDescription} />
 		<!-- Cloudflare Web Analytics -->
 		<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3a115f6485a94c4cbf6a89060d3b3dfd"}'></script>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5T04VWRY5W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5T04VWRY5W');
+</script>
     
 		<AstroFont
 		config={[
@@ -39,6 +48,7 @@ const { title, siteName, siteDescription } = Astro.props;
 				]}
 		/>
 	</head>
+	
 	<body >
 		<div
 			class="bg-zinc-100 bg-horizonAnimated bg-cover  bg-center bg-no-repeat px-3 md:px-6 "
