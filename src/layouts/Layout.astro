@@ -1,10 +1,10 @@
 ---
-import { AstroFont } from 'astro-font';
+import { AstroFont } from "astro-font";
 
 interface Props {
-	title: string;
-	siteName: string;
-	siteDescription: string;
+  title: string;
+  siteName: string;
+  siteDescription: string;
 }
 
 const { title, siteName, siteDescription } = Astro.props;
@@ -12,50 +12,62 @@ const { title, siteName, siteDescription } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<meta name="description" content={siteDescription} />
-		<meta property="og:site_name" content={siteName} />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={siteDescription} />
-		<!-- Cloudflare Web Analytics -->
-		<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3a115f6485a94c4cbf6a89060d3b3dfd"}'></script>
-		<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5T04VWRY5W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={siteDescription} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={siteDescription} />
+    <!-- Cloudflare Web Analytics -->
+    <script
+			type="text/partytown"
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "3a115f6485a94c4cbf6a89060d3b3dfd"}'></script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      type="text/partytown"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-5T04VWRY5W"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-5T04VWRY5W');
-</script>
-    
-		<AstroFont
-		config={[
-						{
-								src: [],
-								name: "Sora",
-								preload: false,
-								display: "swap",
-								fallback: "sans-serif",
-								selector: ".font-sora",
-								googleFontsURL: 'https://fonts.googleapis.com/css2?family=Sora:wght@100..800',
-						},
-				]}
-		/>
-	</head>
-	
-	<body >
-		<div
-			class="bg-zinc-100 bg-horizonAnimated bg-cover  bg-center bg-no-repeat px-3 md:px-6 "
-		>
-			<div class="grid min-h-dvh grid-cols-1 place-content-center place-items-center gap-5 h-full" >
-				<slot />
-			</div>
-		</div>
-	</body>
+      gtag("config", "G-5T04VWRY5W");
+    </script>
+
+    <AstroFont
+      config={[
+        {
+          src: [],
+          name: "Sora",
+          preload: false,
+          display: "swap",
+          fallback: "sans-serif",
+          selector: ".font-sora",
+          googleFontsURL:
+            "https://fonts.googleapis.com/css2?family=Sora:wght@100..800",
+        },
+      ]}
+    />
+  </head>
+
+  <body>
+    <div
+      class="bg-zinc-100 bg-horizonAnimated bg-cover bg-center bg-no-repeat px-3 md:px-6"
+    >
+      <div
+        class="grid min-h-dvh grid-cols-1 place-content-center place-items-center gap-5 h-full"
+      >
+        <slot />
+      </div>
+    </div>
+  </body>
 </html>
