@@ -22,12 +22,9 @@ const { title, siteName, siteDescription } = Astro.props;
     <meta property="og:site_name" content={siteName} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={siteDescription} />
-    <!-- Cloudflare Web Analytics -->
-    <script
-			type="text/partytown"
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "3a115f6485a94c4cbf6a89060d3b3dfd"}'></script>
+		<!-- Cloudflare Web Analytics -->
+		<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3a115f6485a94c4cbf6a89060d3b3dfd"}'></script>
+		<!-- End Cloudflare Web Analytics -->
     <!-- Google tag (gtag.js) -->
     <script
       type="text/partytown"
