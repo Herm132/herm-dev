@@ -22,6 +22,9 @@ const { title, siteName, siteDescription } = Astro.props;
 		<meta property="og:site_name" content={siteName} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={siteDescription} />
+		<!-- Cloudflare Web Analytics -->
+		<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3a115f6485a94c4cbf6a89060d3b3dfd"}'></script>
+    
 		<AstroFont
 		config={[
 						{
