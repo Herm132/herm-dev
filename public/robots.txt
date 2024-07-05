@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://herm-dev.pages.dev/sitemap-index.xml
+
